@@ -20,14 +20,15 @@ if (typeof window.ethereum !== 'undefined') {
 				<p>Баланс (в Wei): ${balance.toString()}</p>
 				<p>Баланс (в Ether): ${ethers.utils.formatEther(balance)}</p>
 			`;
-	} catch (error) {
-		console.error("Ошибка при подключении:", error);
-	}
+		} catch (error) {
+			console.error("Ошибка при подключении:", error);
+		}
 	});
 }
 else {
 	accountInfo.innerHTML = '<p>Пожалуйста, установите .</p>';
 }
+
 
 
 
