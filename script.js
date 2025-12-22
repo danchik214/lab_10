@@ -16,9 +16,9 @@ if (typeof window.ethereum !== 'undefined') {
 			const balance = await provider.getBalance(address);
 			
 			accountInfo.innerHTML = `
-				<p>Адрес кошелька: ${address}</p>
-				<p>Баланс (в Wei): ${balance.toString()}</p>
-				<p>Баланс (в Ether): ${ethers.utils.formatEther(balance)}</p>
+				<p>Адрес кошелька: $ {address}</p>
+				<p>Баланс (в Wei): $ {balance.toString()}</p>
+				<p>Баланс (в Ether): $ {ethers.utils.formatEther(balance)}</p>
 			`;
 	} catch (error) {
 		console.error("Ошибка при подключении:", error);
@@ -28,4 +28,5 @@ if (typeof window.ethereum !== 'undefined') {
 else {
 	accountInfo.innerHTML = '<p>Пожалуйста, установите .</p>';
 }
+
 
